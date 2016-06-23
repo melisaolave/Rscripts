@@ -1,3 +1,5 @@
+#### Please cite GitHub/melisaolve/Rscripts #####
+
 # This script will:
   ##1. take all .trees files within a folder
   ##2. run them in Treeannotar 1.6 
