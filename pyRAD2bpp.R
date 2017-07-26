@@ -40,7 +40,7 @@ species <- gsub(pattern=paste("(\\w+)", sp.ind.pattern, "\\w+", sep=""), replace
 Imap <- data.frame(1:length(taxa), species);
 write.table(Imap, "Imap.txt", row.names=F, col.names=F, quote=F)
 for(i in 1:nrow(Imap)){
-  new.matrix <- gsub(pattern=taxa[i], replacement=paste(species[i],"^",i,sep=""),new.matrix);
+  new.matrix <- gsub(pattern=paste("^",taxa[i],"$", sep=""), replacement=paste(species[i],"^",i,sep=""),new.matrix);
   cat(i, "/", nrow(Imap), "done\n");
 }
 write(new.matrix, "bpp.seqInput.txt");
